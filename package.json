@@ -1,5 +1,5 @@
 {
-  "name": "@chu01/ethiogov-design-system",
+  "name": "@abiyu/ethiogov-design-system",
   "version": "0.1.0",
   "description": "Ethiogov Design System - modern UI toolkit",
   "main": "dist/css/ethiogov.css",
