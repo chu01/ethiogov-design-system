@@ -1,0 +1,20 @@
+{
+  "name": "@chu01/ethiogov-design-system",
+  "version": "0.1.0",
+  "description": "Ethiogov Design System - modern UI toolkit",
+  "main": "dist/css/ethiogov.css",
+  "style": "dist/css/ethiogov.css",
+  "scripts": {
+    "build": "sass src/scss/ethiogov.scss dist/css/ethiogov.css --style=compressed",
+    "dev": "sass --watch src/scss/ethiogov.scss dist/css/ethiogov.css",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
+  },
+  "keywords": ["ethiogov", "design-system", "scss", "ui"],
+  "author": "Abiyu Tegeg",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.78.0",
+    "vitepress": "^1.3.0"
+  }
+}
