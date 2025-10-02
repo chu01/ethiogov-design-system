@@ -1,6 +1,6 @@
 {
   "name": "@abiyub/ethiogov-design-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ethiogov Design System - modern UI toolkit",
   "main": "dist/css/ethiogov.css",
   "style": "dist/css/ethiogov.css",
