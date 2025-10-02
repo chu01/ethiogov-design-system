@@ -1,0 +1,20 @@
+# Ignore source and configs
+src/
+*.config.js
+rollup.config.js
+*.mjs
+
+# Tests
+test/
+tests/
+*.spec.js
+coverage/
+
+# Git & IDE
+.gitignore
+.vscode/
+.idea/
+
+# Other junk
+.DS_Store
+Thumbs.db

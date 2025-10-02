@@ -1,0 +1,21 @@
+@use '../../scss/variables' as *;
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+  
+    &.btn-primary {
+      background-color: $primary-color;
+      color: white;
+    }
+  
+    &.btn-secondary {
+      background-color: $secondary-color;
+      color: white;
+    }
+  }
+  

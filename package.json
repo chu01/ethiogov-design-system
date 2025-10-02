@@ -1,23 +1,27 @@
 {
   "name": "@abiyub/ethiogov-design-system",
-  "version": "0.1.1",
-  "description": "Ethiogov Design System - modern UI toolkit",
-  "main": "dist/css/ethiogov.css",
-  "style": "dist/css/ethiogov.css",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ethiopian government design system",
+  "main": "dist/js/ethio.js",
+  "style": "dist/css/ethio.css",
   "scripts": {
-    "build": "sass src/scss/ethiogov.scss dist/css/ethiogov.css --style=compressed",
-    "dev": "sass --watch src/scss/ethiogov.scss dist/css/ethiogov.css",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs"
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "clean": "rm -rf dist && mkdir -p dist/css dist/js"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "keywords": ["ethiogov", "design-system", "scss", "ui"],
-  "author": "Abiyu Tegeg",
+  "keywords": [
+    "design-system",
+    "ethiogov",
+    "ui"
+  ],
+  "author": "Abiyu B. Tegegn",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.78.0",
-    "vitepress": "^1.3.0"
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "rollup": "^4.52.3",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.71.1"
   }
 }
