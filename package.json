@@ -1,5 +1,5 @@
 {
-  "name": "@abiyu/ethiogov-design-system",
+  "name": "@abiyub/ethiogov-design-system",
   "version": "0.1.0",
   "description": "Ethiogov Design System - modern UI toolkit",
   "main": "dist/css/ethiogov.css",
@@ -9,6 +9,9 @@
     "dev": "sass --watch src/scss/ethiogov.scss dist/css/ethiogov.css",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": ["ethiogov", "design-system", "scss", "ui"],
   "author": "Abiyu Tegeg",
