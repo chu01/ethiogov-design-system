@@ -1,0 +1,11 @@
+<div class="ethio-navbar">
+  {% include "@components/ethio-site-title/src/ethio-site-title.twig" with {
+    'site_title': '<Project title>'
+    }
+  %}
+  {% if nav %}
+    <button type="button" class="ethio-menu-btn">
+      {{ nav.menu.label | default('Menu') }}
+    </button>
+  {% endif %}
+</div>

@@ -1,0 +1,26 @@
+@use "ewds-core" as *;
+
+.ethio-skipnav {
+  @include border-box-sizing;
+  @include typeset;
+  @include typeset-link;
+  @include u-transition("top");
+  background: transparent;
+  left: 0;
+  padding: units(1) units(2);
+  position: absolute;
+  top: -3.8rem; // skipnav link height
+  z-index: z-index(100);
+
+  &:focus,
+  &.ethio-focus {
+    background: color("white");
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.ethio-skipnav__container {
+  position: relative;
+}

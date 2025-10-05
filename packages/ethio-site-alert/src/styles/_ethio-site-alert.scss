@@ -1,0 +1,68 @@
+@use "sass:math";
+@use "ewds-core" as *;
+
+// Alert variables ---------- //
+$site-alert-icons: (
+  info: "info",
+  emergency: "error",
+);
+$site-alert-padding-x-mobile: 2.5;
+$site-alert-padding-x: calc(
+  units($theme-site-margins-width) - units($theme-alert-bar-width) / 2
+);
+
+.ethio-site-alert {
+  .ethio-alert {
+    @include alert-styles;
+
+    .ethio-alert__body {
+      @include u-maxw($theme-site-alert-max-width);
+      @include u-padding-x($site-alert-padding-x-mobile);
+
+      &::before {
+        left: calc(
+          units($site-alert-padding-x-mobile) + $alert-icon-optical-adjust-left
+        );
+      }
+
+      // Align content with site margins at desktop
+      @include at-media($theme-site-margins-breakpoint) {
+        @include u-margin-x("auto");
+        padding-left: $site-alert-padding-x;
+        padding-right: $site-alert-padding-x;
+
+        &::before {
+          left: calc($site-alert-padding-x + $alert-icon-optical-adjust-left);
+        }
+      }
+    }
+  }
+}
+
+@each $name, $icon in $site-alert-icons {
+  .ethio-site-alert--#{$name} .ethio-alert {
+    @include alert-status-wrapper-styles($name);
+
+    .ethio-alert__body {
+      @include alert-status-body-styles($name, $icon);
+    }
+  }
+}
+
+.ethio-site-alert--slim .ethio-alert {
+  @include alert-styles-slim;
+
+  .ethio-alert__body::before {
+    left: calc(
+      units($site-alert-padding-x-mobile) + $alert-slim-icon-optical-adjust-left
+    );
+
+    @include at-media($theme-site-margins-breakpoint) {
+      left: calc($site-alert-padding-x + $alert-slim-icon-optical-adjust-left);
+    }
+  }
+}
+
+.ethio-site-alert--no-icon .ethio-alert {
+  @include alert-styles-no-icon;
+}

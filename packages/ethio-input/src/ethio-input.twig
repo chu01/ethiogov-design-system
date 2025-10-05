@@ -1,0 +1,26 @@
+{% if state == "error" %}<div class="ethio-form-group ethio-form-group--error">{%- endif %}
+  <label class="ethio-label{% if state == "error" %} ethio-label--error{%- endif %}" for="input-type-text">Text input label</label>
+  {% if state == "error" %} <span class="ethio-error-message" id="input-error-message" role="alert">Helpful error message</span>{%- endif %}
+  <input class="ethio-input
+    {% if utilities %} {{ utilities }}{% endif %}
+    {% if state == "focus" %} ethio-focus{%- endif%}
+    {% if state == "error" %} ethio-input--error" aria-describedby="input-error-message{%- endif%}
+    {% if state == "success" %} ethio-input--success{%- endif%}"
+    {% if state == "disabled" %} disabled{%- endif%}
+    {% if state == "aria-disabled" %} aria-disabled="true"{%- endif%}
+    id="input-type-text" name="input-type-text" type="text">
+{% if state == "error" %}</div>
+<div class="ethio-form-group ethio-form-group--error">{%- endif %}
+  <label class="ethio-label{% if state == "error" %} ethio-label--error{%- endif %}" for="input-type-textarea">Text area label</label>
+  {% if state == "error" %}
+    <span class="ethio-error-message" id="textarea-error-message" role="alert">Helpful error message</span>
+  {%- endif %}
+  <textarea class="ethio-textarea
+    {% if utilities %} {{ utilities }}{% endif %}
+    {% if state == "focus" %} ethio-focus{%- endif%}
+    {% if state == "error" %} ethio-input--error" aria-describedby="textarea-error-message{%- endif%}
+    {% if state == "success" %} ethio-input--success{%- endif%}"
+    {% if state == "disabled" %} disabled{%- endif%}
+    {% if state == "aria-disabled" %} aria-disabled="true"{%- endif%}
+    id="input-type-textarea" name="input-type-textarea"></textarea>
+{% if state == "error" %}</div>{%- endif %}

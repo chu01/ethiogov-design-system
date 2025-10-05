@@ -1,0 +1,14 @@
+@use "ewds-core" as *;
+
+.ethio-media-block {
+  @include u-align-items("align-start");
+  @include u-display("flex");
+}
+
+.ethio-media-block__img {
+  @include media-block-img;
+}
+
+.ethio-media-block__body {
+  @include u-flex(1);
+}

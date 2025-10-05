@@ -1,0 +1,18 @@
+<section class="ethio-hero" aria-label="Introduction">
+  <div class="grid-container">
+    <div class="ethio-hero__callout">
+      <h1 class="ethio-hero__heading">
+        {%- if hero.callout -%}
+          <span class="ethio-hero__heading--alt">{{ hero.callout }}</span>
+        {%- endif -%}
+        {{ hero.title }}
+      </h1>
+      {%- if hero.paragraph -%}
+        <p>{{ hero.paragraph }}</p>
+      {%- endif -%}
+      {%- if hero.button -%}
+        <a class="ethio-button" href="{{ hero.button.href }}">{{ hero.button.text }}</a>
+      {%- endif %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<form class="ethio-form">
+  <fieldset class="ethio-fieldset">
+    <legend class="ethio-legend ethio-legend--large">Enter a comment</legend>
+    <div class="ethio-alert ethio-alert--info ethio-alert--validation">
+      <div class="ethio-alert__body">
+        <h3 class="ethio-alert__heading">Comment requirements</h3>
+        <ul class="ethio-checklist" id="validate-comment">
+          <li class="ethio-checklist__item" data-validator="empty">Cannot be empty</li>
+        </ul>
+      </div>
+    </div>
+    <label class="ethio-label" for="comment">Comment</label>
+    <textarea class="ethio-textarea" id="comment" name="comment" data-validate-empty="\S" data-validation-element="validate-comment"></textarea>
+    <input class="ethio-button" type="submit" value="Submit code">
+  </fieldset>
+</form>

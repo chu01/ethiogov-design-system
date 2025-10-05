@@ -1,4 +1,4 @@
-# 🇪🇹 Ethiogov Design System
+# 🇪🇹 Ethiogov WEB Design System (EWDS)
 
 A reusable, consistent, and accessible front-end design system for Ethiopian government digital services.  
 
@@ -86,10 +86,3 @@ We welcome contributions! Please:
 - [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/)
 - [Ethiopian Digital Transformation Strategy](https://mints.gov.et/)  
 - Accessibility guidelines: [WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/)
-
----
-
-## 📜 License
-
-MIT License.  
-Free to use and modify for government and public projects.

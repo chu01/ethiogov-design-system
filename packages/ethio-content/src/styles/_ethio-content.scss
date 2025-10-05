@@ -1,0 +1,9 @@
+@use "ewds-core" as *;
+
+.ethio-content {
+  p,
+  ul:not(.ethio-accordion):not(.ethio-accordion--bordered),
+  ol:not(.ethio-accordion):not(.ethio-accordion--bordered) {
+    max-width: measure($theme-text-measure);
+  }
+}

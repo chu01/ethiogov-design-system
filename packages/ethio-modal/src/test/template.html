@@ -1,0 +1,53 @@
+<div aria-hidden="true" class="ethio-sr-only" id="stays-hidden">
+  Neewds to stay set to aria-hidden="true" when modals are toggled
+</div>
+
+<div id="other-content"></div>
+
+<a id="open-button1" href="#modal" class="ethio-button" aria-controls="modal" data-open-modal>
+  Open modal
+</a>
+<button id="open-button2" type="button" class="ethio-button" aria-controls="modal" data-open-modal>
+  Open modal
+</button>
+<div class="ethio-modal" id="modal" aria-labelledby="modal-sm-heading" aria-describedby="describe">
+  <div class="ethio-modal__content">
+    <div class="ethio-modal__main">
+      <h2 class="ethio-modal__heading" id="modal-sm-heading">
+        You have unsaved changes
+      </h2>
+      <div id="describe" class="ethio-prose">
+        <p>
+          Your changes will be lost if you leave this page without saving. Are
+          you sure you want to continue?
+        </p>
+      </div>
+
+        <label for="nestedCB" class="ethio-label">Combobox label</label>
+        <div class="ethio-combo-box">
+          <select class="ethio-select" name="options" id="nestedCB">
+            <option value>- Select -</option>
+            <option value="value1">Option A</option>
+            <option value="value2">Option B</option>
+            <option value="value3">Option C</option>
+          </select>
+        </div>
+
+      <div class="ethio-modal__footer">
+        <ul class="ethio-button-group">
+          <li class="ethio-button-group__item">
+            <button type="button" class="ethio-button" data-close-modal>
+              Continue
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button type="button" id="close-button" class="ethio-button ethio-modal__close" aria-label="close this window" data-close-modal>
+      <svg class="ethio-icon" aria-hidden="true" focethioble="false" role="img">
+        <use href="{{ ewds.path }}/img/sprite.svg#close"></use>
+      </svg>
+      Close
+    </button>
+  </div>
+</div>

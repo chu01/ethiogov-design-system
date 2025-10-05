@@ -1,0 +1,5 @@
+@use "ewds-core/src/styles/mixins/general/screen-reader" as *;
+
+.ethio-sr-only {
+  @include sr-only;
+}

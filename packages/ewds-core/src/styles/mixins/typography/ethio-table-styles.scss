@@ -1,0 +1,39 @@
+@use "../general/table" as *;
+@use "../helpers/at-media" as *;
+
+@mixin ethio-table-styles {
+  table {
+    @include ethio-table;
+  }
+  .ethio-table--borderless {
+    @include ethio-table--borderless;
+  }
+  .ethio-table--compact {
+    @include ethio-table--compact;
+  }
+  .ethio-table--striped {
+    @include ethio-table--striped;
+  }
+  .ethio-table--stacked {
+    @include at-media-max("mobile-lg") {
+      @include table-stacked-styles;
+    }
+  }
+  .ethio-table--stacked-header {
+    @include at-media-max("mobile-lg") {
+      @include table-stacked-styles;
+      @include table-stacked-header-styles;
+    }
+  }
+  .width-mobile {
+    .ethio-table--stacked {
+      @include ethio-table--stacked;
+    }
+    .ethio-table--stacked-header {
+      @include ethio-table--stacked-header;
+    }
+  }
+  .ethio-table-container--scrollable {
+    @include ethio-table-container--scrollable;
+  }
+}

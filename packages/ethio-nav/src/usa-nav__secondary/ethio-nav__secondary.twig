@@ -1,0 +1,14 @@
+<div class="ethio-nav__secondary">
+  <ul class="ethio-nav__secondary-links">
+    {% for item in items %}
+    <li class="ethio-nav__secondary-item">
+      <a href="{{ item.href }}"{% if item.current %} class="ethio-current"{% endif %}>
+        {{ item.label }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% if search %}
+    {% include "@components/ethio-search/src/ethio-search.twig" with { 'modifier': 'ethio-search--small' } %}
+  {% endif %}
+</div>

@@ -1,0 +1,37 @@
+@use "ewds-core/src/styles/settings" as *;
+@use "ewds-core/src/styles/functions" as *;
+@use "ewds-core/src/styles/mixins/general/add-kerning" as *;
+@use "ewds-core/src/styles/mixins/typography" as *;
+
+html {
+  @include add-kerning;
+  font-family: font-family($theme-body-font-family);
+  font-size: $root-font-size;
+}
+
+@if $theme-style-body-element {
+  body {
+    @include typeset;
+  }
+}
+
+@if $theme-global-paragraph-styles == true {
+  @include ethio-paragraph-style;
+}
+
+@if $theme-global-link-styles == true {
+  @include ethio-link-style;
+}
+
+@if $theme-global-content-styles == true {
+  @include ethio-content-styles;
+}
+
+// Remove user agent styles
+
+cite,
+var,
+address,
+dfn {
+  font-style: normal;
+}

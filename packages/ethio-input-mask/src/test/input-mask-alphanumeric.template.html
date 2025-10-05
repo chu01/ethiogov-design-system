@@ -1,0 +1,22 @@
+<div class="ethio-input-masking">
+  <h3 class="site-preview-heading">Alphanumeric Input Mask</h3>
+  <label class="ethio-label" for="zip">Alphanumeric example</label>
+  <div class="ethio-hint" id="alphanumericHint">For example, A1B 2C3</div>
+  <span class="ethio-input-mask" data-mask="___ ___">
+    <span class="ethio-input-mask--content test" aria-hidden="true" id="alphanumericMask"
+      >___ ___</span
+    >
+    <input
+      id="alphanumeric"
+      type="text"
+      inputmode="text"
+      name="alphanumeric"
+      pattern="\w\d\w \d\w\d"
+      class="ethio-input ethio-masked"
+      aria-describedby="alphanumericHint"
+      maxlength="10"
+      data-placeholder="___ ___"
+      data-charset="A#A #A#"
+    />
+  </span>
+</div>

@@ -1,0 +1,86 @@
+{
+  "alerts": [
+    {
+      "header": "Info alert",
+      "title": "Info alert",
+      "modifier": "ethio-alert--info"
+    },
+    {
+      "header": "Info alert - slim",
+      "title": "",
+      "modifier": "ethio-alert--info ethio-alert--slim"
+    },
+    {
+      "header": "Info alert - no icon",
+      "title": "Info alert - no icon",
+      "modifier": "ethio-alert--info ethio-alert--no-icon"
+    },
+    {
+      "header": "Info alert - slim, no icon",
+      "title": "",
+      "modifier": "ethio-alert--info ethio-alert--slim ethio-alert--no-icon"
+    },
+    {
+      "header": "Emergency alert",
+      "title": "Emergency alert",
+      "modifier": "ethio-alert--emergency"
+    },
+    {
+      "header": "Emergency alert - slim",
+      "title": "",
+      "modifier": "ethio-alert--emergency ethio-alert--slim"
+    },
+    {
+      "header": "Emergency alert - no icon",
+      "title": "Emergency alert - no icon",
+      "modifier": "ethio-alert--emergency ethio-alert--no-icon"
+    },
+    {
+      "header": "Emergency alert - slim, no icon",
+      "title": "",
+      "modifier": "ethio-alert--emergency ethio-alert--slim ethio-alert--no-icon"
+    }
+  ],
+  "siteAlerts": [
+    {
+      "header": "Info site alert",
+      "title": "Info site alert",
+      "modifier": "ethio-site-alert--info"
+    },
+    {
+      "header": "Info site alert - slim",
+      "title": "",
+      "modifier": "ethio-site-alert--info ethio-site-alert--slim"
+    },
+    {
+      "header": "Info site alert - no icon",
+      "title": "Info site alert - no icon",
+      "modifier": "ethio-site-alert--info ethio-site-alert--no-icon"
+    },
+    {
+      "header": "Info site alert - slim, no icon",
+      "title": "",
+      "modifier": "ethio-site-alert--info ethio-site-alert--slim ethio-site-alert--no-icon"
+    },
+    {
+      "header": "Emergency site alert",
+      "title": "Emergency site alert",
+      "modifier": "ethio-site-alert--emergency"
+    },
+    {
+      "header": "Emergency alert - slim",
+      "title": "",
+      "modifier": "ethio-site-alert--emergency ethio-site-alert--slim"
+    },
+    {
+      "header": "Emergency site alert - no icon",
+      "title": "Emergency site alert - no icon",
+      "modifier": "ethio-site-alert--emergency ethio-site-alert--no-icon"
+    },
+    {
+      "header": "Emergency site alert - slim, no icon",
+      "title": "",
+      "modifier": "ethio-site-alert--emergency ethio-site-alert--slim ethio-site-alert--no-icon"
+    }
+  ]
+}

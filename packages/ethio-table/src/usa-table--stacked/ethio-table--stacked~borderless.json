@@ -1,0 +1,4 @@
+{
+  "modifier": "ethio-table--stacked ethio-table--borderless",
+  "caption": "Stacked borderless table (when on a <span class=\"text-no-wrap\">mobile-width</span> screen)"
+}

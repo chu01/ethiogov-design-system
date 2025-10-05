@@ -1,0 +1,31 @@
+/*
+========================================
+float
+----------------------------------------
+ethioge:
+  .float-[value]
+----------------------------------------
+output:
+  float: [value];
+----------------------------------------
+example:
+  .float-left {
+    float: left;
+  }
+----------------------------------------
+*/
+
+@use "ewds-core/src/styles/settings" as *;
+@use "ewds-core/src/styles/functions" as *;
+@use "../functions/" as *;
+
+$u-float: (
+  float: (
+    base: "float",
+    modifiers: null,
+    values: map-collect(get-palettes($float-palettes), $float-manual-values),
+    settings: $float-settings-complete,
+    property: "float",
+    type: "utility",
+  ),
+);

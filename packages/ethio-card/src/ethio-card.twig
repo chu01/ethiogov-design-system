@@ -1,0 +1,39 @@
+{% set card_classes = 'ethio-card ' ~ modifier|default('') %}
+{% set image_fallback = 'https://designsystem.digital.gov/img/introducing-ewds-2-0/built-to-grow--alt.jpg' %}
+
+<ul class="ethio-card-group">
+  {% for card in cards %}
+    {# Card overrides configure individual settings like grid classes, header placement, and direction of image for flags. #}
+    {% set card_overrides = [
+      card.classes_override|default(default_classes),
+      (card.header_first ? 'ethio-card--header-first' : ''),
+      ((card.flag_direction == 'right') ? 'ethio-card--media-right' : '')
+    ] %}
+
+    <li class="{{ card_classes ~ " " ~ card_overrides|join(' ') }}">
+      <div class="ethio-card__container {{ card.container_overrides|default('') }}">
+        <div class="ethio-card__header">
+          <h2 class="ethio-card__heading">{{ card.title }}</h2>
+        </div>
+
+        {% if card.media %}
+          {% set media = card.media %}
+          <div class="ethio-card__media {{ media.media_classes|default('') }}">
+            <div class="ethio-card__img {{ media.image_classes|default('') }}">
+              <img src="{{ media.image_src|default(image_fallback) }}" alt="{{ media.image_alt_text|default('A placeholder image') }}">
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="ethio-card__body {{ card.body_overrides }}">
+          {% if card.content %}
+            <p>{{ card.content | raw }}</p>
+          {% endif %}
+        </div>
+        <div class="ethio-card__footer">
+          <a href="#" class="ethio-button">Visit Florida Keys</a>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

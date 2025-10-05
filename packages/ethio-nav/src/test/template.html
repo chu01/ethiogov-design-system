@@ -1,0 +1,79 @@
+<div class="ethio-overlay"></div>
+<header class="ethio-header ethio-header--basic">
+  <div class="ethio-nav-container">
+    <div class="ethio-navbar">
+      <div class="ethio-logo" id="basic-logo">
+        <em class="ethio-logo__text">
+          <a href="/" title="Home" aria-label="Home">Project title</a>
+        </em>
+      </div>
+      <button type="button" class="ethio-menu-btn">Menu</button>
+    </div>
+    <nav class="ethio-nav">
+      <button type="button" class="ethio-nav__close">
+        <img src="../../dist/img/close.svg" alt="close">
+      </button>
+      <ul class="ethio-nav__primary ethio-accordion">
+        <li class="ethio-nav__primary-item">
+          <button
+            type="button"
+            class="ethio-accordion__button ethio-nav__link  ethio-current"
+            aria-expanded="false"
+            aria-controls="basic-nav-section-one">
+            <span>Current section</span>
+          </button>
+          <ul id="basic-nav-section-one" class="ethio-nav__submenu">
+            <li class="ethio-nav__submenu-item">
+              <a href="#">Navigation link</a>
+            </li>
+            <li class="ethio-nav__submenu-item">
+              <a href="#">Navigation link</a>
+            </li>
+            <li class="ethio-nav__submenu-item">
+              <a href="#">Navigation link</a>
+            </li>
+          </ul>
+        </li>
+        <li class="ethio-nav__primary-item">
+          <button
+            type="button"
+            class="ethio-accordion__button ethio-nav__link"
+            aria-expanded="false"
+            aria-controls="basic-nav-section-two">
+            <span>Section</span>
+          </button>
+          <ul id="basic-nav-section-two" class="ethio-nav__submenu">
+            <li class="ethio-nav__submenu-item">
+              <a href="#">Navigation link</a>
+            </li>
+            <li class="ethio-nav__submenu-item">
+              <a href="#">Navigation link</a>
+            </li>
+            <li class="ethio-nav__submenu-item">
+              <a href="#">Navigation link</a>
+            </li>
+          </ul>
+        </li>
+        <li class="ethio-nav__primary-item">
+          <a class="ethio-nav__link" href="javascript:void(0)">
+            <span>Simple link</span>
+          </a>
+        </li>
+      </ul>
+      <form class="ethio-search ethio-search--small ">
+        <div role="search">
+          <label class="ethio-sr-only" for="basic-search-field-small">
+            Search small
+          </label>
+          <input class="ethio-input" id="basic-search-field-small" type="search" name="search">
+          <button class="ethio-button" type="submit">
+            <span class="ethio-sr-only">Search</span>
+          </button>
+        </div>
+      </form>
+    </nav>
+  </div>
+</header>
+
+<!-- Tests: "makes all other page content invisible to screen readers" -->
+<div id="other-content"></div>

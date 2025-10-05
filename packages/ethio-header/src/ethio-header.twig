@@ -1,0 +1,12 @@
+<div class="ethio-overlay"></div>
+<header class="ethio-header ethio-header--basic {{ modifier }}">
+  <div class="ethio-nav-container">
+    {% include "@components/ethio-header/src/_includes/ethio-navbar.twig" %}
+    {% if nav %}
+    <nav aria-label="{{ nav.aria_label }}" class="ethio-nav">
+      {% include "@components/ethio-nav/src/ethio-nav__primary/ethio-nav__primary.twig" %}
+      {% include "@components/ethio-search/src/ethio-search.twig" with search.settings %}
+    </nav>
+    {% endif %}
+  </div>
+</header>

@@ -1,0 +1,14 @@
+<div>
+  <ul class="ethio-checklist" id="textarea_validation_list">
+    <li class="ethio-checklist__item" data-validator="empty">Cannot by empty</li>
+  </ul>
+  <label class="ethio-label" for="comment">Comment</label>
+  <textarea
+    class="ethio-textarea"
+    id="comment"
+    name="comment"
+    aria-describedby="textarea_validation_list"
+    data-validate-empty="\S"
+    data-validation-element="textarea_validation_list"
+  ></textarea>
+</div>

@@ -1,0 +1,17 @@
+<form class="ethio-form">
+  <fieldset class="ethio-fieldset">
+    <legend class="ethio-legend ethio-legend--large">Enter a code</legend>
+    <div class="ethio-alert ethio-alert--info ethio-alert--validation">
+      <div class="ethio-alert__body">
+        <h3 class="ethio-alert__heading">Code requirements</h3>
+        <ul class="ethio-checklist" id="validate-code">
+          <li class="ethio-checklist__item" data-validator="uppercase">Use at least one uppercase character</li>
+          <li class="ethio-checklist__item" data-validator="numerical">Use at least one number</li>
+        </ul>
+      </div>
+    </div>
+    <label class="ethio-label" for="code">Code</label>
+    <input class="ethio-input" id="code" name="code" type="text" data-validate-uppercase="[A-Z]" data-validate-numerical="\d" data-validation-element="validate-code">
+    <input class="ethio-button" type="submit" value="Submit code">
+  </fieldset>
+</form>

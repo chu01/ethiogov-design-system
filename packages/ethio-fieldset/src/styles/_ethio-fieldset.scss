@@ -1,0 +1,8 @@
+@use "ewds-core" as *;
+
+.ethio-fieldset {
+  @extend %block-input-general;
+  border: none;
+  margin: 0;
+  padding: 0;
+}

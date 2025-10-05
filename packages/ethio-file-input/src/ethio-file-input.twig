@@ -1,0 +1,32 @@
+{% set name = "file-input" %}
+{% set aria_hint =  id ~ "-hint" %}
+{% set aria_error = id ~ "-alert" %}
+
+<div class="ethio-form-group{% if error %} ethio-form-group--error{% endif %}">
+  <label
+    class="ethio-label{% if error %} ethio-label--error{% endif %}"
+    for="{{ id }}"
+  >
+    {{ label }}
+  </label>
+  {%- if hint %}
+    <span class="ethio-hint" id="{{ aria_hint }}">{{ hint }}</span>
+  {%- endif -%}
+  {%- if error %}
+    <span class="ethio-error-message" id="{{ aria_error }}">
+      {{ error_hint_text }}
+    </span>
+  {%- endif %}
+  <input
+    id="{{ id }}"
+    class="ethio-file-input"
+    type="file"
+    name="{{ id }}"
+    {% if hint %}aria-describedby="{{ aria_hint }}"{% endif %}
+    {% if accept %}accept="{{ accept }}"{% endif %}
+    {% if multiple %}multiple{% endif %}
+    {% if disabled_state == 'disabled' %}disabled{% endif %}
+    {% if disabled_state == "aria-disabled" %}aria-disabled="true"{% endif %}
+    {% if invalid_file_text %}data-errorMessage="{{ invalid_file_text }}"{% endif %}
+  />
+</div>

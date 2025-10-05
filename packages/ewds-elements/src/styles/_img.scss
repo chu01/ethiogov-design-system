@@ -1,0 +1,9 @@
+@use "ewds-core/src/styles/mixins/general/media-link" as *;
+
+img {
+  max-width: 100%;
+}
+
+.ethio-media-link {
+  @include media-link;
+}

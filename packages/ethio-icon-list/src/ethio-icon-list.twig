@@ -1,0 +1,20 @@
+{% set list_classes = [
+  "ethio-icon-list",
+  color ? "ethio-icon-list--" ~ color : "",
+  size ? "ethio-icon-list--size-" ~ size : "",
+] %}
+
+<ul class="{{ list_classes | join(' ') | trim }}">
+  {% for item in items %}
+  <li class="ethio-icon-list__item">
+    <div class="ethio-icon-list__icon {% if item.icon.color %} text-{{ item.icon.color }}{% endif %}">
+      <svg class="ethio-icon{% if item.icon.utilities %} {{ item.icon.utilities }}{% endif %}" aria-hidden="true" role="img">
+        <use href="{{ img_path }}/sprite.svg#{{ item.icon.name }}"></use>
+      </svg>
+    </div>
+    <div class="ethio-icon-list__content">
+      {{ item.content }}
+    </div>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,27 @@
+<div class="ethio-language-container">
+  <ul class="ethio-language__primary ethio-accordion">
+    <li class="ethio-language__primary-item">
+      <button type="button" class="ethio-button ethio-button--unstyled ethio-language__link{{ focus ? " ethio-focus" }}" {% if role %} role="{{ role }}" {% endif %} aria-expanded="false" aria-controls="language-options">
+        {{ label | default('Languages') }}
+      </button>
+      {% if languages %}
+        <ul id="language-options" class="ethio-language__submenu" hidden="true">
+          {% for language in languages %}
+            <li class="ethio-language__submenu-item">
+              <a href="{{ placeholder_link }}">
+                {% if language.lang_label %}
+                  <span lang="{{ language.lang_att }}" xml:lang="{{ language.lang_att }}">
+                    <strong>{{ language.lang_label }}</strong> {{ language.lang_label_en }}
+                  </span>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+          <li class="ethio-language__submenu-item">
+            <a href="{{ placeholder_link }}">{{ more }}</a>
+          </li>
+        </ul>
+      {% endif %}
+    </li>
+  </ul>
+</div>

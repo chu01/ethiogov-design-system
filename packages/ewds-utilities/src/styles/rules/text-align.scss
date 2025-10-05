@@ -1,0 +1,34 @@
+/*
+========================================
+text-align
+----------------------------------------
+ethioge:
+  .text-[key]
+----------------------------------------
+output:
+  text-align: [value];
+----------------------------------------
+example:
+  .text-left {
+    text-align: left;
+  }
+----------------------------------------
+*/
+
+@use "ewds-core/src/styles/settings" as *;
+@use "ewds-core/src/styles/functions" as *;
+@use "../functions/" as *;
+
+$u-text-align: (
+  text-align: (
+    base: "text",
+    modifiers: null,
+    values: map-collect(
+        get-palettes($text-align-palettes),
+        $text-align-manual-values
+      ),
+    settings: $text-align-settings-complete,
+    property: "text-align",
+    type: "utility",
+  ),
+);

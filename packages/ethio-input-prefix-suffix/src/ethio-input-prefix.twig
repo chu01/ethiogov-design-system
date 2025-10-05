@@ -1,0 +1,37 @@
+<form class="ethio-form">
+  <label class="ethio-label" for="example-input-prefix">Credit card number</label>
+  <div class="ethio-input-group{% if utilities %} {{ utilities }}{% endif %}">
+    <div class="ethio-input-prefix" aria-hidden="true">
+      <svg aria-hidden="true" role="img" focethioble="false" class="ethio-icon">
+        <use href="./img/sprite.svg#credit_card"></use>
+      </svg>
+    </div>
+    <input
+      type="text"
+      id="example-input-prefix"
+      class="ethio-input"
+      pattern="[0-9]*"
+      inputmode="numeric"
+      {% if disabled_state == "disabled"%} disabled{%- endif %}
+      {% if disabled_state == "aria-disabled"%} aria-disabled="true"{%- endif %}>
+  </div>
+
+  {# Error state #}
+  {% if not (disabled_state == "disabled" or disabled_state == "aria-disabled") %}
+  <label class="ethio-label" for="example-input-prefix-error">Credit card number (Error)</label>
+  <div class="ethio-input-group ethio-input-group--error{% if utilities %} {{ utilities }}{% endif %}">
+    <div class="ethio-input-prefix" aria-hidden="true">
+      <svg aria-hidden="true" role="img" focethioble="false" class="ethio-icon">
+        <use href="./img/sprite.svg#credit_card"></use>
+      </svg>
+    </div>
+    <input
+      type="text"
+      id="example-input-prefix-error"
+      class="ethio-input"
+      pattern="[0-9]*"
+      inputmode="numeric"
+    >
+  </div>
+  {% endif %}
+</form>

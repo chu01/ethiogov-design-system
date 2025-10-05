@@ -1,0 +1,10 @@
+<div class="ethio-overlay"></div>
+<header class="ethio-header {{ modifier }}">
+  {% include "@components/ethio-header/src/_includes/ethio-navbar.twig" %}
+  <nav aria-label="{{ nav.aria_label }}" class="ethio-nav">
+    <div class="ethio-nav__inner">
+      {% include "@components/ethio-nav/src/ethio-nav__primary/ethio-nav__primary.twig" %}
+      {% include "@components/ethio-nav/src/ethio-nav__secondary/ethio-nav__secondary.twig" with navSecondaryContent %}
+    </div>
+  </nav>
+</header>

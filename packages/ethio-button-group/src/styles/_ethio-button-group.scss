@@ -1,0 +1,162 @@
+@use "sass:math";
+
+@use "ewds-core" as *;
+
+// Default styles
+.ethio-button-group {
+  @include u-margin-y(0);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-left: units(-0.5);
+  margin-right: units(-0.5);
+  padding-left: 0;
+
+  @include at-media("mobile-lg") {
+    flex-wrap: nowrap;
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  // Styles for nested button groups
+  .ethio-button-group {
+    height: 100%;
+
+    .ethio-button-group__item {
+      @include at-media("mobile-lg") {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    // Styles for nested segmented button groups
+    &--segmented {
+      .ethio-button-group__item {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.ethio-button-group__item {
+  margin: units(0.5);
+
+  &:last-child {
+    @include at-media("mobile-lg") {
+      margin-right: 0;
+    }
+  }
+
+  .ethio-button {
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Segmented styles
+.ethio-button-group--segmented {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-left: 0;
+  margin-right: 0;
+
+  @include at-media("mobile-lg") {
+    justify-content: flex-start;
+  }
+
+  .ethio-button {
+    position: relative;
+    width: calc(100% + #{units($theme-button-stroke-width)});
+
+    @include at-media("mobile-lg") {
+      width: auto;
+    }
+
+    // Ensures edges are not cut off when interacting with outline buttons
+    &:hover,
+    &:active {
+      z-index: 2;
+    }
+
+    &:focus {
+      z-index: 3;
+    }
+  }
+
+  .ethio-button-group__item {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+
+    @include at-media("mobile-lg") {
+      width: auto;
+    }
+
+    &:first-child > .ethio-button {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-right: -(math.div(units($theme-button-stroke-width), 2));
+    }
+
+    &:last-child > .ethio-button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-right: 0;
+      margin-left: -(units($theme-button-stroke-width));
+      width: calc(100% + #{units($theme-button-stroke-width)});
+
+      @include at-media("mobile-lg") {
+        margin-left: -(math.div(units($theme-button-stroke-width), 2));
+        width: auto;
+      }
+    }
+
+    &:where(:not(:first-child):not(:last-child)) > .ethio-button {
+      border-radius: 0;
+      margin-right: -(math.div(units($theme-button-stroke-width), 2));
+      margin-left: -(math.div(units($theme-button-stroke-width), 2));
+    }
+
+    // Creates separators
+    &:where(:not(:last-child)) {
+      .ethio-button::before {
+        border-right: 1px solid color("primary-dark");
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        right: 1px;
+        top: 0;
+        width: 1px;
+        z-index: 3;
+      }
+
+      .ethio-button--secondary::before {
+        border-right-color: color("secondary-dark");
+      }
+
+      .ethio-button--accent-cool::before {
+        border-right-color: color("accent-cool-dark");
+      }
+
+      .ethio-button--base::before {
+        border-right-color: color("base-dark");
+      }
+
+      [class*="ethio-button"]:disabled::before,
+      [class*="ethio-button"][aria-disabled="true"]::before {
+        border-right-color: color($theme-body-background-color);
+      }
+
+      .ethio-button:active::before,
+      .ethio-button--outline::before {
+        display: none;
+      }
+    }
+  }
+}

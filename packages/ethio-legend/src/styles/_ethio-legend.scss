@@ -1,0 +1,11 @@
+@use "ewds-core" as *;
+
+.ethio-legend {
+  @include add-label-styles;
+}
+
+.ethio-legend--large {
+  font-size: font-size($theme-form-font-family, "xl");
+  font-weight: font-weight("bold");
+  margin-top: units(2);
+}

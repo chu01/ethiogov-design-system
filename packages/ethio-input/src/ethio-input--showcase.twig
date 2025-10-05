@@ -1,0 +1,29 @@
+<label class="ethio-label" for="input-type-text">Text input label</label>
+<input class="ethio-input{% if utilities %} {{ utilities }}{% endif %}" id="input-type-text" name="input-type-text" type="text">
+
+<label class="ethio-label" for="input-focus">Text input focused</label>
+<input class="ethio-input ethio-focus{% if utilities %} {{ utilities }}{% endif %}" id="input-focus" name="input-focus" type="text">
+
+<div class="ethio-form-group ethio-form-group--error">
+  <label class="ethio-label ethio-label--error" for="input-error">Text input error</label>
+  <span class="ethio-error-message" id="input-error-message" role="alert">Helpful error message</span>
+  <input class="ethio-input ethio-input--error{% if utilities %} {{ utilities }}{% endif %}" id="input-error" name="input-error" type="text" aria-describedby="input-error-message">
+</div>
+
+<label class="ethio-label" for="input-success">Text input success</label>
+<input class="ethio-input ethio-input--success{% if utilities %} {{ utilities }}{% endif %}" id="input-success" name="input-success" type="text">
+
+<label class="ethio-label" for="input-type-textarea">Text area label</label>
+<textarea class="ethio-textarea{% if utilities %} {{ utilities }}{% endif %}" id="input-type-textarea" name="input-type-textarea"></textarea>
+
+<label class="ethio-label" for="input-disabled">Text input disabled</label>
+<input class="ethio-input{% if utilities %} {{ utilities }}{% endif %}" id="input-disabled" name="input-disabled" type="text" disabled>
+
+<label class="ethio-label" for="input-type-textarea-disabled">Text area disabled</label>
+<textarea class="ethio-textarea{% if utilities %} {{ utilities }}{% endif %}" id="input-type-textarea-disabled" name="input-type-textarea-disabled" disabled></textarea>
+
+<label class="ethio-label" for="input-aria-disabled">Text input aria-disabled</label>
+<input class="ethio-input{% if utilities %} {{ utilities }}{% endif %}" id="input-aria-disabled" name="input-aria-disabled" type="text" aria-disabled="true">
+
+<label class="ethio-label" for="input-type-textarea-aria-disabled">Text area aria-disabled</label>
+<textarea class="ethio-textarea{% if utilities %} {{ utilities }}{% endif %}" id="input-type-textarea-aria-disabled" name="input-type-textarea-aria-disabled" aria-disabled="true"></textarea>

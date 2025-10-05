@@ -1,0 +1,19 @@
+@use "ewds-core" as *;
+
+.ethio-checklist {
+  @include add-list-reset;
+  @include border-box-sizing;
+  @include typeset;
+}
+
+.ethio-checklist__item {
+  @include add-checkbox-placeholder;
+  @include u-margin-y(0);
+  margin-bottom: 0;
+  margin-top: units(1);
+
+  // Deprecate ethio-checklist__item--checked once the js is updated
+  &.ethio-checklist__item--checked {
+    @include add-success-mark;
+  }
+}

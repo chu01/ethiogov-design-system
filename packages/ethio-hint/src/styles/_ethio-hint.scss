@@ -1,0 +1,10 @@
+@use "ewds-core" as *;
+
+.ethio-hint {
+  @extend %block-input-general;
+  color: color("base");
+}
+
+.ethio-hint--required {
+  color: color("error-dark");
+}

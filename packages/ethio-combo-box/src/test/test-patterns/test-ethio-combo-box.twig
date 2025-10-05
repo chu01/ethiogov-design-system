@@ -1,0 +1,30 @@
+<div class="padding-2">
+  <form class="ethio-form padding-x-2 padding-bottom-2 padding-top-1px bg-base-lightest radius-md maxw-none">
+    {% include '@components/ethio-combo-box/src/ethio-combo-box.twig' with {
+      'label': 'Default combo box in a ethio-form',
+      'name': 'fruit',
+      'id': 'fruit'
+    } %}
+
+    {% include '@components/ethio-combo-box/src/ethio-combo-box.twig' with {
+      'modifier': 'width-tablet maxw-none',
+      'label': 'Override combo box with utilities',
+      'name': 'more-fruit',
+      'id': 'more-fruit'
+    } %}
+  </form>
+
+  {% include '@components/ethio-combo-box/src/ethio-combo-box.twig' with {
+    'modifier': 'width-tablet maxw-none',
+    'label': 'Not in a ethio-form element',
+    'name': 'even-more-fruit',
+    'id': 'even-more-fruit'
+  } %}
+
+  {% include '@components/ethio-combo-box/src/ethio-combo-box.twig' with {
+    'modifier': 'width-full maxw-none',
+    'label': 'Not in a ethio-form element, custom width utilities',
+    'name': 'even-more-more-fruit',
+    'id': 'even-more-more-fruit'
+  } %}
+</div>

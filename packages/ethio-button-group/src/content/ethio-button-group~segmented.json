@@ -1,0 +1,13 @@
+{
+  "modifiers": [
+    "",
+    "ethio-button--accent-cool",
+    "ethio-button--accent-warm",
+    "ethio-button--base",
+    "ethio-button--big",
+    "ethio-button--outline",
+    "ethio-button--outline ethio-button--inverse",
+    "ethio-button--secondary"
+  ],
+  "segmented": true
+}

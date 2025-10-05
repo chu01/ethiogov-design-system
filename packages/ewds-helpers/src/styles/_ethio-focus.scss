@@ -1,0 +1,5 @@
+@use "ewds-core/src/styles/mixins/general/focus-outline" as *;
+
+.ethio-focus {
+  @include focus-outline;
+}

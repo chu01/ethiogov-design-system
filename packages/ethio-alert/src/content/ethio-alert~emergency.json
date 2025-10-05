@@ -1,0 +1,6 @@
+{
+  "modifier": "ethio-alert--emergency",
+  "role": "alert",
+  "title": "Emergency status",
+  "text": "Lorem ipsum dolor sit amet, <a class=\"ethio-link\" href=\"javascript:void(0);\">consectetur adipiscing</a> elit, sed do eiusmod."
+}

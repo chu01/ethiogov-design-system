@@ -1,0 +1,14 @@
+@use "ewds-core" as *;
+
+.ethio-label {
+  @include add-label-styles;
+}
+
+.ethio-label--error {
+  font-weight: font-weight("bold");
+  margin-top: 0;
+}
+
+.ethio-label--required {
+  color: color("error-dark");
+}

@@ -1,0 +1,28 @@
+{% set base_label = search_label|default("Search") %}
+{% set id = id|default("search-field") %}
+{% set section_label = section_label|default("Search component") %}
+
+{% if not search_js %}
+  <section aria-label="{{ section_label }}">
+{% endif %}
+  <form class="ethio-search {{ modifier }} {% if search_js %}js-search-form{% endif %}" role="search">
+    <label class="ethio-sr-only" for="{{ id }}">
+      {{ base_label }}
+    </label>
+    <input class="ethio-input" id="{{ id }}" type="search" name="search">
+    <button class="ethio-button" type="submit">
+      {% if modifier != 'ethio-search--small' %}
+        <span class="ethio-search__submit-text">
+          {{ button_text|default(base_label) }}
+        </span>
+      {% endif %}
+      <img
+          src="./img/ethio-icons-bg/search--white.svg"
+          class="ethio-search__submit-icon"
+          alt="{{ button_text|default(base_label) }}"
+      >
+    </button>
+  </form>
+{% if not search_js %}
+  </section>
+{% endif %}

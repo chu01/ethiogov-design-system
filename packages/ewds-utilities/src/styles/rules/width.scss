@@ -1,0 +1,31 @@
+/*
+========================================
+width
+----------------------------------------
+ethioge:
+  .width-[key]
+----------------------------------------
+output:
+  width: [value];
+----------------------------------------
+example:
+  .width-2 {
+    width: 1rem;
+  }
+----------------------------------------
+*/
+
+@use "ewds-core/src/styles/settings" as *;
+@use "ewds-core/src/styles/functions" as *;
+@use "../functions/" as *;
+
+$u-width: (
+  width: (
+    base: "width",
+    modifiers: null,
+    values: map-collect(get-palettes($width-palettes), $width-manual-values),
+    settings: $width-settings-complete,
+    property: "width",
+    type: "utility",
+  ),
+);

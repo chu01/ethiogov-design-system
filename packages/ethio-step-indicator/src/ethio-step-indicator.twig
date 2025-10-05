@@ -1,0 +1,24 @@
+<div class="ethio-step-indicator {{ modifier }}">
+  <ol class="ethio-step-indicator__segments"{% if noLabels %} aria-hidden="true"{% endif %}>
+    {% for step in steps %}
+      <li class="ethio-step-indicator__segment{% if step.status == "complete" %} ethio-step-indicator__segment--complete{% endif %}{% if step.status == "current" %} ethio-step-indicator__segment--current{% endif %}"{% if step.status == "current" and showLabels %} aria-current="true"{% endif %}>
+        {% if step.label %}
+          <span class="ethio-step-indicator__segment-label">{{ step.label }}
+            {% if step.status == "complete" %}<span class="ethio-sr-only">completed</span>{% endif %}
+            {% if step.status == "incomplete" %}<span class="ethio-sr-only">not completed</span>{% endif %}
+          </span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+  <div class="ethio-step-indicator__header">
+    <h4 class="ethio-step-indicator__heading">
+      <span class="ethio-step-indicator__heading-counter">
+        <span class="ethio-sr-only">Step</span>
+        <span class="ethio-step-indicator__current-step">{{ currentStep }}</span>
+        <span class="ethio-step-indicator__total-steps">of {{ steps.length }}</span>
+      </span>
+      <span class="ethio-step-indicator__heading-text">Supporting documents</span>
+    </h4>
+  </div>
+</div>

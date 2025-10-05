@@ -1,0 +1,6 @@
+{
+  "modifier": "ethio-site-alert--emergency ethio-site-alert--no-icon",
+  "title": null,
+  "aria_label": "Site alert,,,,,",
+  "text": "<strong>Short alert message.</strong> Additional context and followup information including <a class=\"ethio-link\" href=\"javascript:void(0);\">a link</a>."
+}

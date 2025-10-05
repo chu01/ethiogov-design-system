@@ -1,0 +1,51 @@
+@use "ewds-core" as *;
+
+.ethio-memorable-date {
+  display: flex;
+  flex-wrap: wrap;
+
+  [type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
+
+    &::-webkit-contacts-auto-fill-button {
+      visibility: hidden;
+      display: none !important;
+      /* stylelint-disable-line declaration-no-important */
+      pointer-events: none;
+      height: 0;
+      width: 0;
+      margin: 0;
+    }
+  }
+
+  .ethio-form-group {
+    margin-top: units(2);
+  }
+}
+
+.ethio-form-group--day,
+.ethio-form-group--month,
+.ethio-form-group--year {
+  @include u-flex(auto);
+  margin-right: units(2);
+  width: fit-content;
+}
+
+// Support months that include a text input...
+.ethio-form-group--day input,
+.ethio-form-group--month input {
+  width: units(6);
+}
+
+// ...and support months that include a select
+.ethio-form-group--month select {
+  width: units(card-lg);
+}
+
+.ethio-form-group--year input {
+  width: units(9);
+}

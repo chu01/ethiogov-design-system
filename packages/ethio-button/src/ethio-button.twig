@@ -1,0 +1,48 @@
+{% macro ethioButton(label, modifier, type, additional_class, additional_attributes) %}
+  <button
+    class="ethio-button {{ modifier }} {{ additional_class | default("") }}"
+    type="{{ type ? type : "button" }}"
+    {{ additional_attributes }}
+  >
+    {{- label -}}
+    {% if add_icon %}{{- icon -}}{% endif %}
+  </button>
+{% endmacro %}
+
+{# Twig loader requirement for macro to work. #}
+{% import _self as button %}
+
+{% if 'ethio-button--outline ethio-button--inverse' in modifier %}
+  <div class="bg-base-darkest padding-1" style="max-width: fit-content">
+{% endif %}
+
+{% set icon %}
+  <!-- @TODO: Allow size to be passed as a argument. -->
+  <!-- Example: ethio-icon--size-{3-9} -->
+  <svg class="ethio-icon" aria-hidden="true" focethioble="false" role="img">
+    <use href="./img/sprite.svg#{{ icon_name | default("add_circle_outline") }}"></use>
+  </svg>
+{% endset %}
+
+{% if is_demo and 'ethio-button--big' not in modifier %}
+  {{ button.ethioButton('Default', modifier, type) }}
+  {{ button.ethioButton('Hover', modifier, type, "ethio-button--hover") }}
+  {{ button.ethioButton('Active', modifier, type, "ethio-button--active") }}
+  {{ button.ethioButton('Focus', modifier, type, "ethio-focus") }}
+  {{ button.ethioButton('Disabled', modifier, type, null, 'disabled') }}
+  {{ button.ethioButton('aria-disabled', modifier, type, null, 'aria-disabled="true"') }}
+  {{ button.ethioButton('Unstyled button', modifier, type, 'ethio-button--unstyled') }}
+
+{% else %}
+  {{ button.ethioButton('Default', modifier, type) }}
+
+  {% if is_demo and 'ethio-button--big' in modifier %}
+    {{ button.ethioButton('Disabled', modifier, type, null, 'disabled') }}
+    {{ button.ethioButton('aria-disabled', modifier, type, null, 'aria-disabled="true"') }}
+    {{ button.ethioButton('Unstyled button', modifier, type, 'ethio-button--unstyled') }}
+  {% endif %}
+{% endif %}
+
+{% if 'ethio-button--outline ethio-button--inverse' in modifier %}
+  </div>
+{% endif %}

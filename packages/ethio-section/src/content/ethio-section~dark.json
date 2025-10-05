@@ -1,0 +1,5 @@
+{
+  "modifier": "ethio-section--dark",
+  "title": "A dark section",
+  "text": "Lorem ipsum dolor sit amet, <a class=\"ethio-link\" href=\"javascript:void(0);\">consectetur adipiscing</a> elit, sed do eiusmod."
+}

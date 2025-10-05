@@ -1,0 +1,21 @@
+<div class="ethio-input-masking">
+  <h3 class="site-preview-heading">Social Security Number Input Mask</h3>
+  <label class="ethio-label" for="ssn">Social Security Number</label>
+  <div class="ethio-hint" id="ssnHint">For example, 123 45 6789</div>
+  <span class="ethio-input-mask" data-mask="___ __ ____">
+    <span class="ethio-input-mask--content test" aria-hidden="true" id="ssnMask"
+      >___ __ ____</span
+    >
+    <input
+      id="ssn"
+      type="text"
+      inputmode="numeric"
+      name="ssn"
+      pattern="^(?!(000|666|9))\d{3} (?!00)\d{2} (?!0000)\d{4}$"
+      class="ethio-input ethio-masked"
+      aria-describedby="ssnHint"
+      maxlength="11"
+      data-placeholder="___ __ ____"
+    />
+  </span>
+</div>

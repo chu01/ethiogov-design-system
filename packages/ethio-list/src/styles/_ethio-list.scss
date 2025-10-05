@@ -1,0 +1,16 @@
+@use "ewds-core" as *;
+
+.ethio-list {
+  @include ethio-list;
+
+  li {
+    @include ethio-list-item;
+  }
+}
+
+// Unstyled lists
+@include override-prose {
+  .ethio-list--unstyled {
+    @include unstyled-list;
+  }
+}

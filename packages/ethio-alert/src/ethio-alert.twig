@@ -1,0 +1,10 @@
+<div class="ethio-alert {{ modifier }}" {% if role %}role="{{ role }}"{% endif %}>
+  <div class="ethio-alert__body">
+    {%- if title %}
+      <h4 class="ethio-alert__heading">{{ title }}</h4>
+    {%- endif %}
+    <p class="ethio-alert__text">
+      {{ text }}
+    </p>
+  </div>
+</div>

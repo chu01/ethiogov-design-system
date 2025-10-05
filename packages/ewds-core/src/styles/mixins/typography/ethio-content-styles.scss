@@ -1,0 +1,59 @@
+@use "./headings" as *;
+@use "./typeset" as *;
+@use "./ethio-list" as *;
+@use "./ethio-table-styles" as *;
+
+@mixin ethio-paragraph-style {
+  p {
+    @include typeset-p;
+  }
+}
+
+@mixin ethio-link-style {
+  a {
+    @include typeset-link;
+  }
+}
+
+@mixin ethio-headings-styles {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include typeset-heading;
+  }
+
+  h1 {
+    @include h1;
+  }
+
+  h2 {
+    @include h2;
+  }
+
+  h3 {
+    @include h3;
+  }
+
+  h4 {
+    @include h4;
+  }
+
+  h5 {
+    @include h5;
+  }
+
+  h6 {
+    @include h6;
+  }
+}
+
+@mixin ethio-content-styles {
+  @include ethio-paragraph-style;
+  @include ethio-link-style;
+  @include ethio-headings-styles;
+  @include ethio-list-styles;
+  @include ethio-table-styles;
+}

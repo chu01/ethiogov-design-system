@@ -1,0 +1,12 @@
+<form class="ethio-form">
+  <label class="ethio-label" for="example-input-suffix">Weight, in pounds</label>
+  <div class="ethio-input-group {{ utilities | default('ethio-input-group--sm') }}">
+    <input type="text" id="example-input-suffix" class="ethio-input" pattern="[0-9]*" inputmode="numeric"
+    {% if disabled_state == "disabled"%} disabled{%- endif %}
+    {% if disabled_state == "aria-disabled"%} aria-disabled="true"{%- endif %}
+    >
+    <div class="ethio-input-suffix" aria-hidden="true">
+      lbs.
+    </div>
+  </div>
+</form>

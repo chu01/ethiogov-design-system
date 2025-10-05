@@ -1,0 +1,20 @@
+<div class="ethio-input-masking">
+  <h3 class="site-preview-heading">US Telephone Number Input Mask</h3>
+  <label class="ethio-label" for="tel">US Telephone Number</label>
+  <div class="ethio-hint" id="telHint">For example, (123) 456-7890</div>
+  <span class="ethio-input-mask" data-mask="___-___-____">
+    <span class="ethio-input-mask--content test" aria-hidden="true" id="telMask"
+      >___-___-____</span
+    >
+    <input
+      id="tel"
+      type="tel"
+      name="tel"
+      pattern="\\d{3}-\d{3}-\d{4}"
+      class="ethio-input ethio-masked"
+      aria-describedby="telHint"
+      maxlength="14"
+      data-placeholder="___-___-____"
+    />
+  </span>
+</div>

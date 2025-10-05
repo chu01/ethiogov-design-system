@@ -1,0 +1,6 @@
+{
+  "modifier": "ethio-site-alert--info",
+  "title": "Short alert message",
+  "aria_label": "Site alert,",
+  "text": "Additional context and followup information including <a class=\"ethio-link\" href=\"javascript:void(0);\">a link</a>."
+}

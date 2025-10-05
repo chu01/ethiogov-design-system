@@ -1,0 +1,5 @@
+@use "ewds-core" as *;
+
+.ethio-paragraph {
+  @include typeset-p;
+}
