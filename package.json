@@ -1,5 +1,5 @@
 {
-  "name": "@abiyub/ewds",
+  "name": "@abiyub/ethiogov-design-system",
   "version": "1.0.3",
   "description": "Ethiopian Government Design System based on ewds principles",
   "main": "gulpfile.js",
